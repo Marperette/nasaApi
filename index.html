@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
+    <title>Javascript Nasa Maria</title>
+</head>
+
+<body>
+    <header>
+        <h2>NASA MARS ROVERS</h2>
+        <!-- kod för att toggle dark mode -->
+        <label class="switchBtn">
+            <input type="checkbox" id="switchBtn">
+            <span class="slider round"></span>
+        </label>
+    </header>
+    <div class="container">
+        <form autocomplete="off">
+            <h3>Choose your Space Name</h3>
+            <label for="spaceName">Space Name (must be 3 characters)</label>
+            <input type="text" name="spaceName" id="spaceName" placeholder="Pick your space name">
+            <button id="submitBtn" disabled="disabled">Show my name</button>
+        </form>
+        <section class="welcome">
+        </section>
+        <section class="card-container hide">
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

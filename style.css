@@ -1,0 +1,242 @@
+@charset "UTF-8";
+*, html {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #FCFAFF;
+  font-family: 'poppins';
+  color: #212121;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+header {
+  background-color: #DFD6F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0 0.5rem 2rem;
+  /* switch - Boxen runt slider */
+}
+
+header h2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+header .switchBtn {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 2rem;
+  /* Gömmer default HTML checkbox */
+  /* slider */
+}
+
+header .switchBtn input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+header .switchBtn input:checked + .slider {
+  background-color: #8D79B1;
+}
+
+header .switchBtn input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+  background-color: #0F0A17;
+}
+
+header .switchBtn input:focus + .slider {
+  -webkit-box-shadow: 0 0 2px #0F0A17;
+          box-shadow: 0 0 2px #0F0A17;
+}
+
+header .switchBtn .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #8D79B1;
+  border-radius: 34px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header .switchBtn .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #F0F0F0;
+  border-radius: 50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.container {
+  padding: 1rem;
+}
+
+@media (min-width: 481px) {
+  .container {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: auto;
+  }
+}
+
+.container form {
+  background-color: #DFD6F2;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 600px;
+}
+
+.container form label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  font-size: 1rem;
+}
+
+.container form input {
+  min-width: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  font-size: 1.3rem;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 10px;
+}
+
+.container form input::-webkit-input-placeholder {
+  color: grey;
+}
+
+.container form input:-ms-input-placeholder {
+  color: grey;
+}
+
+.container form input::-ms-input-placeholder {
+  color: grey;
+}
+
+.container form input::placeholder {
+  color: grey;
+}
+
+.container form input.focusStyle {
+  outline: none;
+  border-bottom: 3px solid #8D79B1;
+}
+
+.container form button {
+  border: none;
+  padding: 0.75rem;
+  font-size: 20px;
+  background-color: #8D79B1;
+  color: #F0F0F0;
+  cursor: pointer;
+  margin-left: auto;
+  border-radius: 10px;
+}
+
+.container form button:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.container .welcome {
+  margin-left: 2rem;
+}
+
+.container .card-container {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container .card-container .card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  background-color: #DFD6F2;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+
+@media (min-width: 480px) {
+  .container .card-container .card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container .card-container .card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 23%;
+            flex: 0 0 23%;
+  }
+}
+
+.container .card-container .card img {
+  width: 100%;
+}
+
+.dark {
+  background-color: #0F0A17;
+}
+
+.dark header, .dark form, .dark .card-container .card {
+  background-color: #211631;
+}
+
+.dark a, .dark h2, .dark h3, .dark h4, .dark label {
+  color: #F0F0F0;
+}
+/*# sourceMappingURL=style.css.map */
